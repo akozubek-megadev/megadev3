@@ -31,6 +31,8 @@
     <p class="meta"><span>owner <b>akozubek-megadev</b></span><span class="status">submitted</span><span>reviewed 2026-10-28</span></p>
   </header>
   <p>Ticket #4471 contains <strong>412 unique reports</strong>. The export has 427 rows because 15 report IDs appear more than once. Each unique report is merged into #4471.</p>
+  <h2>Engineering update · 5 October</h2>
+  <p>The support desk closed #4471 after engineering reviewed both causes. The shared parser problem was fixed with <code>fix(dates): parse dd/mm for eu locales</code>. The booking-v3 hint problem will not be fixed because the booking-v3 form was retired. The issue statuses below record those outcomes.</p>
   <h2>Problems found</h2>
   <p class="summary"><strong>412</strong> unique reports in #4471 · 15 overlapping export rows removed</p>
   <table>
@@ -44,8 +46,8 @@
   <p>The intake tag is only a guess, not a cause. The five reports the desk noted as one-day moves remain within the parser group; they do not form a third cause in the tenant-and-channel analysis.</p>
   <h2>Tickets</h2>
   <ul>
-    <li><a href="https://github.com/akozubek-megadev/megadev3/issues/1">Shared parser reads month-first — 379 reports</a></li>
-    <li><a href="https://github.com/akozubek-megadev/megadev3/issues/2">Booking-v3 form hint conflicts with day-first locales — 33 reports</a></li>
+    <li><a href="https://github.com/akozubek-megadev/megadev3/issues/1">Shared parser reads month-first — 379 reports; fixed</a></li>
+    <li><a href="https://github.com/akozubek-megadev/megadev3/issues/2">Booking-v3 form hint conflicts with day-first locales — 33 reports; won't fix (form retired)</a></li>
   </ul>
   <p class="stamp">desk ref <b>DR-FFG8-XX8H</b></p>
   <footer>Pages are written by people. Tables and charts are built from data at render time.</footer>

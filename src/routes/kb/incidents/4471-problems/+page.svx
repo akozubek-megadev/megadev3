@@ -14,6 +14,10 @@ signature: 'v1.eyJzdWIiOiI0NDUwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpY
 
 Ticket #4471 contains **412 unique reports**. The export has 427 rows because 15 report IDs appear more than once. Each unique report is merged into #4471.
 
+## Engineering update · 5 October
+
+The support desk closed #4471 after engineering reviewed both causes. The shared parser problem was fixed with `fix(dates): parse dd/mm for eu locales`. The booking-v3 hint problem will not be fixed because the booking-v3 form was retired. The issue statuses below record those outcomes.
+
 ## Problems found
 
 <ProblemSplit />
@@ -24,7 +28,7 @@ The intake tag is only a guess, not a cause. The five reports the desk noted as 
 
 ## Tickets
 
-- [Shared parser reads month-first — 379 reports](https://github.com/akozubek-megadev/megadev3/issues/1)
-- [Booking-v3 form hint conflicts with day-first locales — 33 reports](https://github.com/akozubek-megadev/megadev3/issues/2)
+- [Shared parser reads month-first — 379 reports; fixed](https://github.com/akozubek-megadev/megadev3/issues/1)
+- [Booking-v3 form hint conflicts with day-first locales — 33 reports; won't fix (form retired)](https://github.com/akozubek-megadev/megadev3/issues/2)
 
 <RenderStamp {signature} />
