@@ -1,0 +1,30 @@
+---
+layout: runbook
+title: '#4471 · two date problems'
+owner: akozubek-megadev
+status: submitted
+reviewed: 2026-10-28
+signature: 'v1.eyJzdWIiOiI0NDUwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMTMxOTIsImV4cCI6MTc5MzI5OTU5Mn0.mQsvcfewbgpVXdc0yhqgiWgNxumRske1-5qWWlr6sfo'
+---
+
+<script>
+  import ProblemSplit from '#lib/kb/ProblemSplit.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+Ticket #4471 contains **412 unique reports**. The export has 427 rows because 15 report IDs appear more than once. Each unique report is merged into #4471.
+
+## Problems found
+
+<ProblemSplit />
+
+The shared parser reads month-first while the affected tenants write dates day-first. That cause spans app, email, and booking-v2 form reports. Booking-v3 forms create a separate problem: they tell people to enter month-first dates even though those tenants use day-first locales.
+
+The intake tag is only a guess, not a cause. The five reports the desk noted as one-day moves remain within the parser group; they do not form a third cause in the tenant-and-channel analysis.
+
+## Tickets
+
+- [Shared parser reads month-first — 379 reports](https://github.com/akozubek-megadev/megadev3/issues/1)
+- [Booking-v3 form hint conflicts with day-first locales — 33 reports](https://github.com/akozubek-megadev/megadev3/issues/2)
+
+<RenderStamp {signature} />
